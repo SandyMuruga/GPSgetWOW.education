@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><!-- layout_no_internet_connection.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="#4E4D4D"
+    android:id="@+id/layoutNoInternet"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_40dp"
+        android:src="@drawable/ic_no_internet" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/textViewNoInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Please connect to the internet. No Internet Connection"
+        android:textColor="#FA3E30"
+        android:textStyle="bold" />
+</LinearLayout>

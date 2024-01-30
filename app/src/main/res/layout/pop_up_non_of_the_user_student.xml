@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_30dp"
+        android:gravity="center"
+        android:text="None of the Student Users
+Registered with this mobile number are mandated to use
+this app."
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_15dp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_exit"
+        android:layout_width="@dimen/_150dp"
+        android:layout_height="@dimen/_40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:background="@drawable/rounded_rectangle_blue_filled"
+        android:text="@string/register"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_contact_your_administrator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:gravity="center"
+        android:text="APP Administator"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/_40dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

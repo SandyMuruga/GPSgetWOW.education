@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">exploreapi.getwow.education</domain>
+        <domain includeSubdomains="true">cephapi.getster.tech</domain>
+        <domain includeSubdomains="true">u27api.getwow.education</domain>
+        <domain includeSubdomains="true">customer-registrationapi.getwow.education</domain>
+        <domain includeSubdomains="true">launchappapi.getwow.education</domain>
+        <domain includeSubdomains="true">u15api.getwow.community</domain> <!--insert gps tracking-->
+        <domain includeSubdomains="true">u27api.getwow.community</domain> <!--insert gps tracking-->
+        <trust-anchors>
+            <certificates src="@raw/ca" />
+        </trust-anchors>
+    </domain-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

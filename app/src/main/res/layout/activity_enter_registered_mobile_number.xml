@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trasparant"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_registered_customer_logo"
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="@dimen/_70dp"
+        android:layout_marginStart="@dimen/_45dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:translationZ="@dimen/_60dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_customer_logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/_2dp"
+            android:background="@drawable/bg_white_rectangle"
+            android:src="@drawable/app_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/_5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_8dp"
+            android:src="@drawable/ic_left_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_110dp"
+            android:layout_marginLeft="@dimen/_90dp"
+            android:includeFontPadding="false"
+            android:text="GPS - XYZ School App"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_header1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_below="@+id/rl_header"
+        android:background="@color/colorGray"
+        android:elevation="@dimen/_5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_name8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_header1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_registered_customer_logo"
+                        android:layout_width="@dimen/_80dp"
+                        android:layout_height="@dimen/_80dp"
+                        android:layout_marginLeft="@dimen/_2dp"
+                        android:src="@drawable/app_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_logo"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Please enter your registered mobile number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_mo_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_logo"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_sim_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_mobil_no"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_contry_code2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/_10dp"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.hbb20.CountryCodePicker
+                                    android:id="@+id/ccp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="@dimen/_50dp"
+                                    android:background="@drawable/et_border"
+                                    android:gravity="center"
+                                    app:ccp_autoDetectLanguage="true"
+                                    app:ccp_contentColor="@color/black"
+                                    app:ccp_defaultNameCode="IN"
+                                    app:ccp_showFlag="true"
+                                    app:ccp_showNameCode="false" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_register_mobile_no"
+                                    android:layout_width="200dp"
+                                    android:layout_height="@dimen/_50dp"
+                                    android:layout_marginStart="@dimen/_5dp"
+                                    android:background="@drawable/et_border"
+                                    android:gravity="center"
+                                    android:hint="Registered mobile number"
+                                    android:inputType="phone"
+                                    android:maxLength="10"
+                                    android:paddingStart="@dimen/_5dp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/light_gray"
+                                    android:textCursorDrawable="@drawable/cursor_color"
+                                    android:textSize="@dimen/_14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_below="@+id/ll_mo_no"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_next_registered_mobile_no"
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_rectangle_blue_filled"
+                        android:text="NEXT"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/layout_no_internet_connection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl_map_icon"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+
+
+
+
+
+
+

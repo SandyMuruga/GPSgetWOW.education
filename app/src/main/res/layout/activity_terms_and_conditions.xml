@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="@dimen/_70dp"
+        android:layout_marginStart="@dimen/_45dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:translationZ="@dimen/_60dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_customer_logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/_2dp"
+            android:background="@drawable/bg_white_rectangle"
+            android:src="@drawable/app_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_profile_pic"
+        android:layout_width="@dimen/_55dp"
+        android:layout_height="@dimen/_55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:background="@drawable/bg_white_rectangle"
+        android:elevation="@dimen/_10dp"
+        android:translationZ="@dimen/_60dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_user_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher_foreground" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/_5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_8dp"
+            android:src="@drawable/ic_left_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_70dp"
+            android:layout_marginLeft="@dimen/_90dp"
+            android:layout_toEndOf="@+id/iv_back"
+            android:layout_toRightOf="@+id/iv_back"
+            android:includeFontPadding="false"
+            android:text="GPS - XYZ School App"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_header2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_below="@+id/rl_header"
+        android:background="@color/colorGray"
+        android:elevation="@dimen/_5dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_name_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:text="@string/terms_conditions"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header2">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:text="@string/terms_and_con"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:text="@string/We_do_not" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

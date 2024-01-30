@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">GPSgetWOW.education</string>
+    <string name="no_internet">No Internet\n</string>
+    <string name="register">Register</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="start_tracking_connection">Start Tracking Connection</string>
+    <string name="congratulations_your_gps_tracker_is_working">Congratulations!
+        Your GPS Tracker is Working.</string>
+    <string name="your_live_location_is_visible_in_the_map_below">Your Live Location is visible in
+        the map below</string>
+    <string name="tracking_end_time_date"><![CDATA[Tracking End Time & Date:]]></string>
+    <string name="tracking_start_time_date"><![CDATA[Tracking Start Time & Date:]]></string>
+    <string name="view_in_map">View in Map</string>
+    <string name="stop_tracking">Stop Tracking</string>
+
+    <string name="SMS_will_be_sent_from_the_following_SIM">SMS will be sent from the following SIM cards installed in your phone for verification and registration</string>
+    <string name="the_mobile_number_is_not_registered">The Mobile Number: +91 7865875423 is not registered with any of the Customers of getbiz.app</string>
+    <string name="the_mobile_number_is_not_registered_one">The Mobile Number: +91 7865875423 is not registered</string>
+    <string name="please_enter_the_registered">Please select the Registered / Login Mobile Number</string>
+    <string name="please_contact_your_app_administrator">Please contact your APP Administrator for further queries.</string>
+
+    <string name="select_from_the_following_businesses">Select from the following businesses of getster.tech</string>
+    <string name="please_enter_verification_code">Please enter the verification code sent via SMS to:</string>
+    <string name="login">Login</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="face_reconition">Face recognition required for tracking*</string>
+    <string name="track_data_page">    Please select to view past trackig data of:</string>
+    <string name="verify">Verify</string>
+    <string name="please_select_to_change_settings">Please select to change settings of:</string>
+    <string name="underline">_____________________________________________________________________________________</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="instruction">"   This native app is developed to overcome the limitations of the progressive web app due to the lack of support for push notifications in ios. This app is accessible only by registered business users and is a purely an opt-in service. The user has the choice to opt-in for notifications or opt-out at any time. The information in this app is not shared with any third parties and this notifications app is only intended to enhance/aid/compliment the businesses in which the user is associated or employed or registered."</string>
+    <string name="terms">    This native app is developed to overcome the limitations of the progressive web app due to the lack of support for push notifications in ios. This app is accessible only by registered business users and is a purely an opt-in service. The user has the choice to opt-in for notifications or opt-out at any time. The information in this app is not shared with any third parties and this notifications app is only intended to enhance/aid/compliment the businesses in which the user is associated or employed or registered.</string>
+    <string name="terms_and_con">Terms And Conditions:</string>
+    <string name="We_do_not">1. We do not</string>
+    <string name="gps_tracker_app">Mobile GPS Tracker App</string>
+    <string name="register_user">Register User</string>
+    <string name="network">Network</string>
+    <string name="select_the_country">Select the country</string>
+    <string name="select_your_registered_getster_mobile_number">Select your Registered GETster Mobile Number</string>
+    <string name="getwow_education">getWOW.education</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tracking_start_date_time"><![CDATA[Tracking Start Time & Date:]]></string>
+    <string name="no_internet_pl_connect_to_internet">No internet.\n Pl connect to Internet.</string>
+
+    <string name="location_current">Current Location</string>
+    <string name="location_updated">Location Updated: %1$s</string>
+    <string name="no_internet_connection">Oops, your connection seems off..Please try after connecting to a network</string>
+
+    <!-- location updates-->
+    <string name="service_running">Service Running</string>
+
+    <string name="launch_activity">Launch activity</string>
+    <string name="location_unknown">Location unknown</string>
+    <string name="location_updates_label">Location Updates</string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="ok">OK</string>
+    <string name="request_location_updates">Request location updates</string>
+    <string name="remove_location_updates">Remove location updates</string>
+
+</resources>

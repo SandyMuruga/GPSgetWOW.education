@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/nav_open_account_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/test_this_gps_tracker"
+            android:title="Test this GPS Tracker" />
+    </group>
+    <group
+        android:id="@+id/nav_login_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/current_tracking_status"
+            android:title="Current Tracking Status" />
+    </group>
+    <group
+        android:id="@+id/nav_stock_signals_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/past_tracking_data"
+            android:title="Past Tracking Data" />
+    </group>
+    <group
+        android:visible="false"
+        android:id="@+id/nav_stock_your_reg"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/your_reg"
+            android:title="Your Registration Details" />
+    </group>
+    <group
+        android:id="@+id/nav_stock_terms_and_cond"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/terms_and_cond"
+            android:title="Terms and Conditions" />
+    </group>
+
+</menu>

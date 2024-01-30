@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/trasparant"
+    android:fitsSystemWindows="true">
+
+    <!--<RelativeLayout
+        android:id="@+id/rl_header1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/_5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/page_back"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_8dp"
+            android:src="@drawable/ic_left_arrow" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_toRightOf="@id/page_back"
+            android:src="@drawable/getbizapp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_65dp"
+            android:layout_toRightOf="@+id/page_back"
+            android:includeFontPadding="false"
+            android:text="GPS Tracker App"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_header2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_below="@+id/rl_header1"
+        android:background="@color/colorGray"
+        android:elevation="@dimen/_5dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/burger_menue"
+            android:layout_width="@dimen/_35dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10dp"
+            android:elevation="@dimen/_20dp"
+            android:src="@drawable/burger_menu" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_name_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/burger_menue"
+            android:gravity="center"
+            android:text="Register User"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_header1"
+        tools:openDrawer="start">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rl_header2">
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navigationView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@android:color/white"
+                android:fitsSystemWindows="true"
+                android:visibility="visible"
+                app:itemBackground="@android:color/white"
+                app:menu="@menu/menu_navigation" />
+        </ScrollView>
+    </androidx.drawerlayout.widget.DrawerLayout>-->
+
+
+</RelativeLayout>
