@@ -2,6 +2,7 @@ package com.gpsgetwoweducation.activity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -98,14 +99,21 @@ public class HomePage extends AppCompatActivity implements NetworkChangeReceiver
     private String businessName, country_code, customer_id, sub_domain_name;
     private SharedPreferenceClass sharedPreferenceClass;
     private boolean isGpsDataInserted = false;
-
     String userImage;
+
+    int MY_OVERLAY_PERMISSION_REQUEST_CODE = 1001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Configuration.getInstance().load(this, getPreferences(Context.MODE_PRIVATE));
         setContentView(R.layout.activity_home_page);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
+            Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()));
+            startActivityForResult(intent, MY_OVERLAY_PERMISSION_REQUEST_CODE);
+            Toast.makeText(this, "Please enable \"Appear on top\" settings.", Toast.LENGTH_SHORT).show();
+        }
 
         sharedPreferenceClass = new SharedPreferenceClass(this);
         networkChangeReceiver = new NetworkChangeReceiver(this);
@@ -148,6 +156,36 @@ public class HomePage extends AppCompatActivity implements NetworkChangeReceiver
         initializeUI();
         initializeDrawer();
         initializeMapAsync();
+
+        if (!isLocationEnabled()) {
+            showEnableLocationDialog();
+        }
+
+    }
+
+    private boolean isLocationEnabled() {
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (locationManager != null) {
+            return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        }
+        return false;
+    }
+
+    private void showEnableLocationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Location services are disabled. Do you want to enable them?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", (dialog, which) -> {
+                    // Open location settings
+                    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(intent);
+                })
+                .setNegativeButton("No", (dialog, which) -> {
+                    // Close the app or take appropriate action
+                    finish();
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
 
@@ -277,7 +315,9 @@ public class HomePage extends AppCompatActivity implements NetworkChangeReceiver
         if (mapTestGps != null) {
             mapTestGps.onResume();
         }
+
     }
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -285,6 +325,7 @@ public class HomePage extends AppCompatActivity implements NetworkChangeReceiver
             mapTestGps.onPause();
         }
     }
+
     @SuppressLint("MissingPermission")
     private void centerMapOnUserLocation() {
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -312,7 +353,7 @@ public class HomePage extends AppCompatActivity implements NetworkChangeReceiver
 
             @Override
             public void onProviderDisabled(String provider) {
-                Toast.makeText(HomePage.this, "GPS provider disabled", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(HomePage.this, "GPS provider disabled", Toast.LENGTH_SHORT).show();
             }
         };
         if (mapTestGps != null && locationListener != null && locationManager != null) {
@@ -325,13 +366,14 @@ public class HomePage extends AppCompatActivity implements NetworkChangeReceiver
                 createOrUpdateMarker(userLatitude, userLongitude, "Your Location", locationMarkerDrawableId, userImage);
                 centerMapOnLocation(userLatitude, userLongitude);
             } else {
-                Toast.makeText(this, "Unable to get your location", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(this, "Unable to get your location", Toast.LENGTH_SHORT).show();
             }
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, MIN_TIME, MIN_DISTANCE, locationListener);
         } else {
             //Toast.makeText(this, "Map or location manager is null", Toast.LENGTH_SHORT).show();
         }
     }
+
     // Inset GPS Tracking Data
     private void insertGpsTrackingData(double latitude, double longitude) {
         insertGpsTrackingViewModel = ViewModelProviders.of(this).get(InsertGpsTrackingViewModel.class);
@@ -412,6 +454,7 @@ public class HomePage extends AppCompatActivity implements NetworkChangeReceiver
                                 mapTestGps.getOverlays().add(userImageMarker);
                                 mapTestGps.invalidate();
                             }
+
                             @Override
                             public void onLoadCleared(@Nullable Drawable placeholder) {
                                 // Placeholder or clear action if needed

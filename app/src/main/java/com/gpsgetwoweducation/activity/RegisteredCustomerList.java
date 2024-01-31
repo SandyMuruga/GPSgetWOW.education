@@ -103,19 +103,11 @@ public class RegisteredCustomerList extends AppCompatActivity implements Network
         Context ctx = getApplicationContext();
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
 
-       /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
-            Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                    Uri.parse("package:" + getPackageName()));
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            Toast.makeText(this, "Please enable \"Appear on top\" settings.", Toast.LENGTH_SHORT).show();
-        } */
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
+      /*  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
             Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()));
             startActivityForResult(intent, MY_OVERLAY_PERMISSION_REQUEST_CODE);
             Toast.makeText(this, "Please enable \"Appear on top\" settings.", Toast.LENGTH_SHORT).show();
-        }
+        }*/
 
         if (!checkAndRequestLocationPermission()) {
             requestLocationPermission();
@@ -132,6 +124,10 @@ public class RegisteredCustomerList extends AppCompatActivity implements Network
             checkAndRequestLocationPermissions();
         } else {
             updateInternetStatus(false);
+        }
+
+        if (!isLocationEnabled()) {
+            showLocationServicesAlertDialog();
         }
 
         String isLogin = sharedPreferenceClass.get("isLogin");
